@@ -1,0 +1,21 @@
+{
+    "name": "Frappe/ERPNext Development",
+    "image": "mcr.microsoft.com/devcontainers/universal:2", // Use a suitable base image
+    "features": {
+      "github.com/devcontainers/features/node:latest": {}, // Optional: For frontend development if needed
+      "ghcr.io/devcontainers/features/common-utils:latest": {
+          "installZsh": true,
+          "installOhMyZsh": true,
+          "installGitLfs": true
+      }
+    },
+    "postCreateCommand": "bash ./.devcontainer/post-create.sh", // Script to run after container creation
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode-remote.remote-containers",
+                // ... other VS Code extensions you might want
+            ]
+        }
+    }
+  }
